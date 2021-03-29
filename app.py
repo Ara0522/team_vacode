@@ -9,6 +9,17 @@ def top():
 def kyu():
     return render_template("kyu.html")
 
+@app.route("/212345678")
+def kyu_ko():
+    k = request.args.get("kyuu")
+    ji = request.args.get("jika")
+    k2 = int(k)
+    ji2 = int(ji)
+    ko = k2 * ji2
+
+    return render_template("kyu_ko.html",ko=ko)
+
+
 
 @app.route("/3")
 def en():
