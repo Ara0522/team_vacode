@@ -23,15 +23,15 @@ def kyu_ko():
 
 @app.route("/3")
 def en():
-    a = request.args.get()
-    b = request.args.get()
-    π = 3.14
-    c = a * b * π
-    return render_template("en.html",c=c)
+    return render_template("en.html")
 
 @app.route("/50")
 def enn():
-    return render_template("enn.html")
+    a = int(request.args.get("a"))
+    pi = 3.14
+    d = a * 2 *pi
+    c = a * a * pi
+    return render_template("enn.html",c=c,d=d)
 
 if __name__ == "__main__":
     app.run(debug=True)
